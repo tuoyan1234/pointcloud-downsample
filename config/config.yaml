@@ -8,4 +8,4 @@ downsampleParams:
   isUniformdownsample: true
   leafSize: 0.2
 
-plyFilePath: ~/1744870787.176924.ply
+plyFilePath: ../ply/1744870787.176924.ply
