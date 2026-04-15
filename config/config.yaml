@@ -1,0 +1,11 @@
+downsampleParams:
+  isPassthroughdownsample: false
+  passthroughAxis: x
+  passthroughMin: -1.0
+  passthroughMax: 1.0
+  isRandomdownsample: false
+  isVoxeldownSample: false
+  isUniformdownsample: true
+  leafSize: 0.2
+
+plyFilePath: ~/1744870787.176924.ply
