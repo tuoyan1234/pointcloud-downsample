@@ -2,7 +2,7 @@
  * @Author: tyz 1872516355@qq.com
  * @Date: 2026-04-15 19:05:21
  * @LastEditors: tyz 1872516355@qq.com
- * @LastEditTime: 2026-04-15 20:49:12
+ * @LastEditTime: 2026-04-18 10:40:19
  * @FilePath: /Desktop/点云降采样/main.cpp
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -64,7 +64,7 @@ int main(){
     // random downsample
     if(downsample.isRandomdownsample){
         downsample.randomDownSample(cloud_in, cloud_out, downsample.leafSize);
-        std::cout << "finish random downsample" << std::endl;
+        std::cout << "finish random downsample" <<  " ,downsampled size:" << cloud_out->points.size() << std::endl;
     }else{
         std::cout << "no random downsample" << std::endl;
     }
@@ -72,7 +72,7 @@ int main(){
     // isPassthroughdownsample
     if(downsample.isPassthroughdownsample){
         downsample.passThroughDownSample(cloud_in, cloud_out, downsample.passthroughAxis, downsample.passthroughMin, downsample.passthroughMax);
-        std::cout << "finish passthrough downsample" << std::endl;
+        std::cout << "finish passthrough downsample" << " ,downsampled size:" << cloud_out->points.size() << std::endl;
     }else{
         std::cout << "no passthrough downsample" << std::endl;
     }
@@ -80,7 +80,7 @@ int main(){
     // isVoxeldownSample
     if(downsample.isVoxeldownSample){
         downsample.voxelGridDownSample(cloud_in, cloud_out, downsample.leafSize);
-        std::cout << "finish VoxeldownSample" << std::endl;
+        std::cout << "finish VoxeldownSample" << " ,downsampled size:" << cloud_out->points.size() <<std::endl;
     }else{
         std::cout << "no VoxeldownSample" << std::endl;
     }
@@ -88,7 +88,7 @@ int main(){
     // isUniformdownsample
     if(downsample.isUniformdownsample){
         downsample.uniformSamplingDownSample(cloud_in, cloud_out, downsample.leafSize);
-        std::cout << "finish Uniformdownsample" << std::endl;
+        std::cout << "finish Uniformdownsample" << " ,downsampled size:" << cloud_out->points.size() <<std::endl;
     }else{
         std::cout << "no Uniformdownsample" << std::endl;
     }
